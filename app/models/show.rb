@@ -5,12 +5,15 @@ class Show < ActiveRecord::Base
     Show.maximum("rating")
   end
 
-  # Returns the show with the highest rating.
+  # Returns the show with the highest rating
   def self.most_popular_show
     Show.find_by(rating: self.highest_rating)
   end
 
-  #lowest_rating: returns the lowest value in the ratings column.
+  # Returns the lowest value in the ratings column
+  def self.lowest_rating
+    Show.minimum("rating")
+  end
 
   #least_popular_show: returns the show with the lowest rating.
 
