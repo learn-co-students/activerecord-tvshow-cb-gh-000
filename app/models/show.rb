@@ -30,6 +30,8 @@ class Show < ActiveRecord::Base
     Show.where("rating > 5")
   end
 
-  #shows_by_alphabetical_order: returns an array of all of the shows sorted by alphabetical order according to their names.
-  # hint: use the #order Active Record method.
+  # Returns an array of all of the shows sorted by alphabetical order according to their names.
+  def self.shows_by_alphabetical_order
+    Show.order(:name)
+  end
 end
