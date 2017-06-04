@@ -4,6 +4,7 @@ require 'active_record'
 
 Bundler.require
 
+require_relative '../lib/show'
 
 DBNAME = "tvshows"
 
