@@ -8,7 +8,7 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with(:truncation)
     DatabaseCleaner.start
     DatabaseCleaner.clean
-    system("rake db:migrate")
+    system("bundle exec rake db:migrate")
   end
 
 end
