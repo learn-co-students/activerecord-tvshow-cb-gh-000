@@ -14,15 +14,7 @@ describe Show do
   end
 
   describe "attributes" do
-    it "has data attributes given to it from a migration file" do
-    #TODO: You'll need to create a new migration to add
-    #the necessary columns to the shows table
-      expect(@rick_and_morty.name).to eq("Rick and Morty")
-      expect(@rick_and_morty.day).to eq("Thursday")
-      expect(@rick_and_morty.network).to eq("Adult Swim")
-      expect(@rick_and_morty.rating).to eq(10)
-    end
-
+    
     it "has a season" do
       game_of_thrones = Show.create(:name => "Game of Thrones", :day => "Sunday", :season => "Spring", :network => "HBO", :rating => 10)
       expect(game_of_thrones.season).to eq("Spring")
